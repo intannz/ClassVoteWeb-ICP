@@ -2,8 +2,5 @@
 README.md
 .gitignore
 
-# Ignore Windows Zone Identifier files recursively
-**/*:Zone.Identifier
-
 # Ignore Node.js dependencies (if they exist in the source folder)
 node_modules/
