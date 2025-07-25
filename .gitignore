@@ -1,0 +1,25 @@
+# DFX & Internet Computer generated files
+# Contains local canister IDs and temporary build artifacts. Should not be committed.
+.dfx
+declarations
+
+# JavaScript dependencies
+# Created by "npm install" and is very large.
+node_modules
+
+# Frontend build output (if using Vite/Webpack)
+# Created by "npm run build".
+dist
+.vite
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Log files from NPM or Yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor-specific configuration (optional, but good practice)
+.vscode

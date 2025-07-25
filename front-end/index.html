@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ClassVote</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/mobile.css">
+        <link rel="icon" type="image/x-icon" href="img/round-logo.png">
+    </head>
+    <body>
+        <div id="login-view" style="display: none; align-items: center; justify-content: center; height: 100vh; width: 100%; background: linear-gradient(to right, #00c6ff, #0072ff);">
+    <div class="login-container">
+        <h1>Login ke ClassVote</h1>
+        <button id="login-btn" class="login-button">Login dengan Internet Identity</button>
+    </div>
+</div>
+
+<div id="main-app-view" style="display: none;">
+
+    <div class="navbar-container">
+        <div class="logo">
+            <img src="/img/logo.png" alt="ClassVote">
+        </div>
+        <button class="mobile-menu-toggle"><i class="fa-solid fa-align-justify"></i></button>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#Candidate1">Candidate 1</a></li>
+                <li><a href="#Candidate2">Candidate 2</a></li>
+                <li><a href="#Candidate3">Candidate 3</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+        </div>
+        
+        <div class="mobile-menu">
+            <ul>
+                 <li><a href="#" id="logoutBtnMobile">Logout</a></li>
+            </ul>
+            </div>
+            <div class="menu-overlay"></div>
+
+            <header>
+                <div class="banner">
+                    <h1>CLASSVOTE</h1>
+                    <p>Easy Voting, Trusted Results</p>
+                </div>
+            </header>
+
+            <main>
+                <div id="content">
+                    <article id="Candidate1" class="card">
+                        <figure><img src="img/candidate-1.png" alt="Andra"></figure>
+                        <div>
+                            <h2 class="candidate">Andra Wahyudi</h2>
+                            <p>
+                                <strong>Vision:</strong><br>
+                                "To create an active, innovative, and high-achieving classroom where every student feels comfortable and motivated to develop their fullest potential."
+                            </p>
+                            <p>
+                                <strong>Mission:</strong><br>
+                                <ol>
+                                    <li>To build effective communication between students, teachers, and school staff to ensure that every aspiration and feedback is heard and acted upon.</li>
+                                    <li>To create an inclusive and supportive learning environment where no student feels left behind and everyone has equal opportunities to grow.</li>
+                                    <li>To organize creative and educational activities (such as enjoyable group study sessions, interactive discussions, or friendly competitions) that can boost learning interest and strengthen relationships among students.</li>
+                                </ol>
+                            </p>
+                            <button class="btn-vote" data-id="1">Vote</button>
+                        </div>
+                    </article>
+                    <article id="Candidate2" class="card">
+                        <figure><img src="img/candidate-2.png" alt="Dekha"></figure>
+                        <div>
+                            <h2 class="candidate">Dekha Rohani</h2>
+                            <p>
+                                <strong>Vision:</strong><br>
+                                ""To create a tidy, disciplined, and united classroom that serves as a role model for other classes in terms of togetherness and responsibility."
+                            </p>
+                            <p>
+                                <strong>Mission:</strong><br>
+                                <ol>
+                                    <li>To implement consistent and fair classroom rules to maintain order and a comfortable learning environment.</li>
+                                    <li>To initiate the “Caring Class” program focused on classroom cleanliness and aesthetics, encouraging active participation from all students.</li>
+                                    <li>To foster a spirit of collaboration and teamwork in every task and activity, so that each challenge can be faced more easily together.</li>
+                                </ol>
+                            </p>
+                            <button class="btn-vote" data-id="2">Vote</button>
+                        </div>
+                    </article>
+                    <article id="Candidate3" class="card">
+                        <figure><img src="img/candidate-3.png" alt="Davina"></figure>
+                        <div>
+                            <h2 class="candidate">Davina Karamoy</h2>
+                            <p>
+                            <strong>Vision:</strong><br>
+                            "To shape a class with outstanding character, upholding the values of honesty, hard work, and social awareness, while being prepared to face the future."
+                        </p>
+                        <p>
+                            <strong>Mission:</strong><br>
+                            <ol>
+                                <li>To hold regular motivation and self-development sessions to boost students' confidence and foster a positive mindset.</li>
+                                <li>To build strong friendships within the class through positive social or recreational activities.</li>
+                                <li>To promote social awareness initiatives (such as book donation programs or recycled waste collection) to cultivate a sense of responsibility toward the environment and others.</li>
+                            </ol>
+                        </p>
+                            <button class="btn-vote" data-id="3">Vote</button>
+                        </div>
+                    </article>
+                </div>
+                <aside>
+                    <article class="card">
+                        <section id="voting-result">
+                            <h2>Voting Result</h2>
+                            <ul id="result-list"></ul>
+                        </section>
+                    </article>
+                </aside>
+            </main>
+            
+            <footer>
+                <p>&copy; 2025 ClassVote. All rights reserved.</p>
+                <p>Powered by <a class="icp-link" href="https://internetcomputer.org/" target="_blank">ICP</a></p>
+            </footer>
+        </div>
+
+        <div id="notification" class="notification"></div>
+
+        <script type="module">
+        import { AuthClient } from "https://esm.sh/@dfinity/auth-client";
+        window.AuthClient = AuthClient;
+        </script>
+        <script type="module" src="js/voting.js"></script>
+    </body>
+</html>

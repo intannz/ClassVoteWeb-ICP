@@ -1,0 +1,20 @@
+{
+  "canisters": {
+    "classvote_backend": {
+      "main": "back-end/voting_back-end/main.mo",
+      "type": "motoko"
+    },
+    "ClassVote_web_frontend": {
+      "dependencies": ["classvote_backend"],
+      "frontend": {
+        "entrypoint": "front-end/index.html"
+      },
+      "source": [
+        "front-end/"
+      ],
+      "type": "assets"
+    }
+  },
+  "dfx": "0.17.0",
+  "version": 1
+}
